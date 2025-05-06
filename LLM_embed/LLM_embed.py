@@ -16,14 +16,14 @@ MODEL_SHORT_NAME = MODEL_NAME.split('/')[-1]
 
 # --- GPU Selection ---
 # Specify GPU indices (as strings) to make visible (e.g., ["0", "1"] or ["2", "3"]).
-VISIBLE_GPU_INDICES = ["0", "1", "3", "4"] 
+VISIBLE_GPU_INDICES = ["1", "3", "4"] 
 
 
 # --- Embedding Parameters ---
 # Which hidden layers to extract (0-based index from the hidden_states tuple)
 # Layers 4, 8, 12, 16, 20, 24, 28 (every 4th, excluding last which is index 32)
 # Hidden_states tuple includes input embeddings (idx 0) + output of each layer (idx 1-32)
-TARGET_LAYER_INDICES = [8, 16, 24]
+TARGET_LAYER_INDICES = [4, 12, 20, 28]
 
 # Maximum sequence length the model can handle (check model's config on Hugging Face)
 # DeepSeek-R1 has a large context, but setting a reasonable limit is good practice

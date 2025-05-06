@@ -1,3 +1,4 @@
+# DataExtract/graph_builder.py
 import json
 import os
 import networkx as nx
@@ -9,7 +10,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 OUTPUT_FOLDER = "DataExtract/Data"
 
 INPUT_JSONL_FILE = "Data/stackexchange_cdxtoolkit_data_all_fixed.jsonl"
-GRAPH_OUTPUT_FILE = os.join(OUTPUT_FOLDER, "stackexchange_graph.gexf") # Or .adjlist, .pkl etc.
+GRAPH_OUTPUT_FILE = os.path.join(OUTPUT_FOLDER, "stackexchange_graph.gexf") # Or .adjlist, .pkl etc.
 
 def canonicalize_url(url):
     """Basic URL canonicalization: remove fragment, add scheme if missing."""
@@ -115,8 +116,8 @@ if __name__ == "__main__":
     logging.info("Graph saved.")
 
     # Save mappings and text data (optional, but useful)
-    MAPPING_FILE = os.join(OUTPUT_FOLDER,"url_id_mapping.json")
-    TEXT_DATA_FILE = os.join(OUTPUT_FOLDER,"node_text_data.json") # Map ID -> text
+    MAPPING_FILE = os.path.join(OUTPUT_FOLDER,"url_id_mapping.json")
+    TEXT_DATA_FILE = os.path.join(OUTPUT_FOLDER,"node_text_data.json") # Map ID -> text
 
     logging.info(f"Saving URL-ID mappings to {MAPPING_FILE}...")
     with open(MAPPING_FILE, 'w', encoding='utf-8') as f:
