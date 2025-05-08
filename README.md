@@ -1,4 +1,4 @@
-# Semantic Link Prediction in Web Graphs using LLM Embeddings and GraphSAGE
+# Leveraging LLM Reasoning for Graph Link Prediction - Semantic Link Prediction in Web Graphs using LLM Embeddings and GraphSAGE
 
 This project investigates the enhancement of link prediction in large-scale web graphs by integrating rich semantic information derived from Large Language Model (LLM) embeddings. We hypothesize that the nuanced understanding of textual content captured by advanced LLMs can significantly complement traditional graph-based structural features, leading to more accurate discovery of existing (unobserved) and potential future relationships between web pages.
 
